@@ -28,6 +28,7 @@
   "app.orders.dispense": "Dispense",
   "app.orders.orderBy": "Ordered by",
   "app.orders.activeDates":"Active Dates",
+  "app.orders.dateAdministered":"Date Administered",
   "app.orders.testStatus.IN_PROGRESS":"Collected",
   "app.orders.testStatus.COMPLETED":"Reported",
   "app.orders.testStatus.RECEIVED":"Received",

@@ -208,8 +208,7 @@ export class OrdersTable extends PureComponent {
               date={order.dateActivated}>
               {order.orderType.name.match(/drug/i) ? (
                 <DrugOrderDetails
-                  dosingInstructions={order.dosingInstructions}
-                  dispense={order.dispense}
+                  details={order.display}
                   activeDates={format(order.dateActivated, dateFormat)}
                   orderer={order.orderer.display.split('-')[1]}
                 />
