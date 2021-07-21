@@ -361,8 +361,8 @@
 }
 
 .patient-header {
-  .demographics h2 span {
-    color: #0A0A0A;
+  .PersonName-givenName, .PersonName-middleName, .PersonName-familyName  {
+    color: #042F8B;
   }
   margin: 10px 0px;
 }
