@@ -295,6 +295,17 @@ export class OrderEntryPage extends PureComponent {
 
     return (
       <div className="order-entry-page">
+        <ul id="breadcrumbs">
+          <li>
+            <a href={returnUrl}>
+              <i class="icon-home small"></i>
+            </a>
+          </li>
+          <li>
+            <i class="icon-chevron-right link"></i>
+            Prescriptions
+          </li>
+        </ul>
         {this.props.patient ? (
           <div>
             <PatientHeader
