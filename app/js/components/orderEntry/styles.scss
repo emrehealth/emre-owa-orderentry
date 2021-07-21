@@ -342,7 +342,7 @@
     -webkit-transition: all ease-in-out 200ms;
 
     #draft-discard-btn {
-      color: #ff3d3d;
+      color: #ce3d3d;
     }
 
     &:hover {
@@ -361,5 +361,12 @@
 }
 
 .patient-header {
+  .demographics h2 span {
+    color: #0A0A0A;
+  }
   margin: 10px 0px;
+}
+
+.no-result-info {
+  color: #0A0A0A;
 }

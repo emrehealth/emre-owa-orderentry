@@ -12,8 +12,8 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   max-width: 1000px;
   margin: 10px auto;
-  background: #eeeeee;
-  color: #363463;
+  background: #D1DDF0;
+  color: #0A0A0A;
   font-size: 16px;
 }
 
@@ -38,6 +38,10 @@ body {
   .all-orders {
     width: 100%;
   }
+}
+
+.user-options {
+  background-color: #042F8B;
 }
 
 /* Layout */
