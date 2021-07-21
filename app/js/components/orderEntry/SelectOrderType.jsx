@@ -6,29 +6,28 @@ import * as orderTypes from './orderTypes';
 
 const SelectOrderType = ({ switchOrderType, currentOrderType, orderType }) => {
   const orderTypesAsObject = Object.values(orderTypes);
-  let displayText = (<FormattedMessage
-    id="app.orders.add"
-    defaultMessage="Add Orders"
-    description="Add Orders" />);
-  let clickHandler = () => {};
-  // if "type" = "laborders" or "drugorders" restricts the app to lab or drug orders respectively
-  if (orderType === 'laborders') {
-    displayText =
-      (<FormattedMessage
-        id="app.orders.labs.add"
-        defaultMessage="Add Lab Orders"
-        description="Add Lab Orders" />);
+  // let displayText = (<FormattedMessage
+  //   id="app.orders.add"
+  //   defaultMessage="Add Orders"
+  //   description="Add Orders" />);
+  // let clickHandler = () => {};
+  // // if "type" = "laborders" or "drugorders" restricts the app to lab or drug orders respectively
+  // if (orderType === 'laborders') {
+  //   displayText =
+  //     (<FormattedMessage
+  //       id="app.orders.labs.add"
+  //       defaultMessage="Add Lab Orders"
+  //       description="Add Lab Orders" />);
 
-    clickHandler = () => switchOrderType(orderTypesAsObject[1]);
-  }
+  //   clickHandler = () => switchOrderType(orderTypesAsObject[1]);
+  // }
 
-  if (orderType === "drugorders") {
-    displayText = (<FormattedMessage
-      id="app.orders.drugs.add"
-      defaultMessage="Add Drug Orders"
-      description="Add Drug Orders" />);
-    clickHandler = () => switchOrderType(orderTypesAsObject[0]);
-  }
+  const displayText = (<FormattedMessage
+    id="app.orders.drugs.add"
+    defaultMessage="Add Drug Orders"
+    description="Add Drug Orders" />);
+  const clickHandler = () => switchOrderType(orderTypesAsObject[0]);
+
   return (
     <div className="dropdown">
       <div className="add-order-nav">
@@ -38,7 +37,7 @@ const SelectOrderType = ({ switchOrderType, currentOrderType, orderType }) => {
           {displayText}
         </button>
       </div>
-      <div className="dropdown-content" style={{ display: orderType && "none" }} >
+      {/* <div className="dropdown-content" style={{ display: orderType && "none" }} >
         {orderTypesAsObject.map(type => (
           <div
             key={type.id}
@@ -50,7 +49,7 @@ const SelectOrderType = ({ switchOrderType, currentOrderType, orderType }) => {
             {type.text}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
